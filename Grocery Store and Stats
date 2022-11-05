@@ -1,0 +1,33 @@
+CREATE TABLE grocery_store (id INTEGER PRIMARY KEY, product TEXT, quantity INTEGER, price INTEGER, section TEXT);
+
+INSERT INTO grocery_store VALUES (1, "Bananas", 20, .50, "Fresh_Produce");
+INSERT INTO grocery_store VALUES (2, "Jelly Beans Bag", 5, 2.50, "Candy");
+INSERT INTO grocery_store VALUES (3, "Granny Apples", 4, .75, "Fresh_Produce");
+INSERT INTO grocery_store VALUES (4, "20 OZ Coke", 150, 1.99, "Drinks");
+INSERT INTO grocery_store VALUES (5, "Wheat Crackers", 18, 1.74, "Baked_Goods");
+INSERT INTO grocery_store VALUES (6, "Brownies", 7, 2.43, "Baked_Goods");
+INSERT INTO grocery_store VALUES (7, "Gallon Bottle Water", 35, 3.50, "Drinks");
+INSERT INTO grocery_store VALUES (8, "Clothes Detergent", 7, 7.89, "Cleaning_Products");
+INSERT INTO grocery_store VALUES (9, "Pre-Washed Salad", 9, 3.50, "Fresh_Produce");
+INSERT INTO grocery_store VALUES (10, "Mangos", 11, 2.50, "Fresh_Produce");
+INSERT INTO grocery_store VALUES (11, "16 OZ Chuck Beef", 13, 9.99, "Deli");
+INSERT INTO grocery_store VALUES (12, "Fish Chips", 9, 4.59, "Frozen_Goods");
+INSERT INTO grocery_store VALUES (13, "Dark Chocolate Bar", 139, 1.99, "Candy");
+INSERT INTO grocery_store VALUES (14, "Dish Soap", 32, 2.99, "Cleaning_Products");
+INSERT INTO grocery_store VALUES (15, "Maple Syrup", 12, 2.32, "Breakfast");
+
+
+/** the grocery_store table with all store product info **/
+SELECT * FROM grocery_store;
+
+/** list product prices in descending order **/
+SELECT * FROM grocery_store WHERE price ORDER BY price DESC;
+
+/** what is the average price for fresh_prodcue section? **/
+SELECT AVG(price) FROM grocery_store WHERE section='Fresh_Produce'; 
+
+/** what are the 5 most expensive items **/
+SELECT product, price FROM grocery_store ORDER BY price DESC LIMIT 5;
+
+
+
