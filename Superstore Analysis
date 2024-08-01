@@ -9,3 +9,10 @@ SELECT SUM(stock_quantity),item_name
 FROM superstore
 WHERE item_name="Air Purifier"
 ORDER BY item_name;
+
+SELECT COUNT(item_id)
+FROM superstore;
+
+SELECT * 
+FROM superstore
+LIMIT 5;
