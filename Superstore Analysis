@@ -1,0 +1,11 @@
+-- I'm querying a database with a foucs on aggregating the date to quantify statistics about customer and order data.`
+
+SELECT SUM(price), category
+FROM superstore
+WHERE category="Kitchen Supplies"
+ORDER BY category;
+
+SELECT SUM(stock_quantity),item_name
+FROM superstore
+WHERE item_name="Air Purifier"
+ORDER BY item_name;
